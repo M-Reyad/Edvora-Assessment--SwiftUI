@@ -1,0 +1,16 @@
+PODS:
+  - NavigationBarColor (0.1.0)
+
+DEPENDENCIES:
+  - NavigationBarColor
+
+SPEC REPOS:
+  trunk:
+    - NavigationBarColor
+
+SPEC CHECKSUMS:
+  NavigationBarColor: fbb2d80e4772c59bb55575572cf0499459db366e
+
+PODFILE CHECKSUM: c4bc1e583845460bd07cdf8529b2e777838cf192
+
+COCOAPODS: 1.11.2
