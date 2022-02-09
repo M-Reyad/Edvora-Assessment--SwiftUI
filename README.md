@@ -27,4 +27,12 @@ Responsible for Making Safe URL Session, Fetching the JSON data and finally crea
 2- Completing the Filters Functionlaity
 
 
-Images:
+
+##Images:
+![Simulator Screen Shot - iPhone 8 - 2022-02-10 at 00 14 08](https://user-images.githubusercontent.com/93882864/153310289-2c5b0a49-9e87-458d-8e67-8f29c714a897.png)
+![Simulator Screen Shot - iPhone 8 - 2022-02-10 at 01 32 22](https://user-images.githubusercontent.com/93882864/153310295-6c448187-bf06-413d-ac13-879580f02c01.png)
+![Simulator Screen Shot - iPhone 8 - 2022-02-10 at 01 32 09](https://user-images.githubusercontent.com/93882864/153310309-6a9bacec-e65a-4c67-b273-7953fd4ddb91.png)
+
+
+https://user-images.githubusercontent.com/93882864/153310562-86e51a9b-098f-440d-97f2-00e505c68487.mov
+
