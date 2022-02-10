@@ -12,12 +12,16 @@ import SwiftUI
 
 struct FiltersView: View {
     
-//    let options = ["Egypt", "America", "KSA"]
-    //    let categoryDropDown = DropDown()
+    init(_ categories: [Category]){
+        self.categories = categories
+    }
+    
+    var categories: [Category]
     var body: some View {
         VStack(alignment: .leading){
             Text("Filters")
                 .font(.custom(K.titleFontName, size: K.filterFontSize))
+                .foregroundColor(K.textColor)
             Divider()
             VStack(alignment: .leading){
                 Button(action: {}) {
@@ -61,13 +65,20 @@ struct FiltersView: View {
                     }
             }
         }
+        .frame(width: UIScreen.main.bounds.size.width/3,
+               height: UIScreen.main.bounds.size.height/2,
+               alignment: .center)
+            .foregroundColor(K.productBackGroundColor)
+
     }
     }
-struct FiltersView_Previews: PreviewProvider {
-    static var previews: some View {
-        FiltersView()
-    }
-}
+
+
+//struct FiltersView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FiltersView()
+//    }
+//}
 
 
 

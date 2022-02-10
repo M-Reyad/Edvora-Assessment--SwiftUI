@@ -30,53 +30,24 @@ struct ContentView: View {
                 HStack(alignment: .top){
                     Spacer()
                     Button(action: {
-                        
                         print("Pressed!!")
-                        self.filtersPressed.toggle()
-                    })
+                        self.filtersPressed.toggle()})
                     {
                         HStack{
-                            Spacer()
                             Text("Filters")
                                 .font(.custom(K.titleFontName, size: K.filterFontSize))
                                 .foregroundColor(K.textColor)
-                            Spacer()
-                            Spacer()
+                                .padding(.init(top: 3, leading: 3, bottom: 0, trailing: 0))
                             Image(systemName: K.dropDownIcon)
                                 .foregroundColor(K.textColor)
-                            Spacer()
+                                .padding(.trailing, 3)
                         }
-                        .padding(6)
                         .clipShape(Capsule())
                         .background(K.textBackgroundColor)
-                        /*Button(action: {{
-                         print  ("Pressed!!")
-                         self.filtersPressed.toggle()
-                         }.sheet(is Presented: $filtersPressed){
-                         FiltersView()
-                         .position(x:100, y:100)
-                         .frame(width: UIScreen.main.bounds.size.width/4,
-                         height: UIScreen.main.bounds.size.height/3,
-                         alignment: .center)
-                         }, label: {
-                         HStack{
-                         Spacer()
-                         Text("Filters")
-                         .font(.custom(K.titleFontName, size: K.filterFontSize))
-                         .foregroundColor(K.textColor)
-                         Spacer()
-                         Spacer()
-                         Image(systemName: K.dropDownIcon)
-                         .foregroundColor(K.textColor)
-                         Spacer()
-                         }
-                         })
-                         .padding(7)
-                         .clipShape(RoundedRectangle(cornerRadius: 5))
-                         .background(K.textBackgroundColor)
-                         */
                     }
-                    Spacer()
+                    .sheet(isPresented: $filtersPressed){
+                     FiltersView(self.apiManager.categories)
+                    }
                     Spacer()
                     Spacer()
                     
@@ -88,10 +59,11 @@ struct ContentView: View {
                             .font(.custom(K.titleFontName, size: K.filterFontSize))
                             .foregroundColor(K.textColor)
                     }
-                    .padding(6)
+//                    .padding(.init(top: 0, leading: 2, bottom: 0, trailing: 2))
                     .clipShape(Capsule())
                     .background(K.textBackgroundColor)
-                    
+//                    .padding(.init(top: 0, leading: 2, bottom: 0, trailing: 2))
+                    Spacer()
                 }
             
             if self.apiManager.categories.count != 0 {
@@ -102,12 +74,12 @@ struct ContentView: View {
                         Category(category.productName, productsList: category.products)
                     }
                 }
-                .padding(2)
+                .padding(.init(top: 0, leading: 2, bottom: 0, trailing: 2))
             }
             Spacer()
             
         }
-        .padding([.leading, .trailing], 5)
+        .padding(.init(top: 0, leading: 3, bottom: 2, trailing: 3))
             //            .navigationBarTitle("Edvora", displayMode: .automatic)
             
             

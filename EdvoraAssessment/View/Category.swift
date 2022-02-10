@@ -33,17 +33,20 @@ struct Category: View, Hashable {
             if self.products.count != 0 {
 
                 ScrollView(.horizontal) {
-                        HStack(spacing: 5){
+                        HStack(spacing: 7){
                             ForEach(self.products, id: \.self){ product in
 
                                 Products(product)
+                                   
+
                                 
                         }
-                            Spacer()
+//                            Spacer()
                     }
                 }
 
  }
+            Spacer()
             Divider()
             Spacer()
         }
