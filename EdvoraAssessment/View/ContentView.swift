@@ -37,14 +37,18 @@ struct ContentView: View {
                             Text("Filters")
                                 .font(.custom(K.titleFontName, size: K.filterFontSize))
                                 .foregroundColor(K.textColor)
-                                .padding(.init(top: 3, leading: 3, bottom: 0, trailing: 0))
+                                .padding(.init(top: 5, leading: 10, bottom: 5, trailing: 0))
+                            .cornerRadius(7)
                             Image(systemName: K.dropDownIcon)
                                 .foregroundColor(K.textColor)
-                                .padding(.trailing, 3)
+//                                .padding(.trailing, 3)
+                                .padding(.init(top: 5, leading: 0, bottom: 5, trailing: 10))
+                            .cornerRadius(7)
                         }
-                        .clipShape(Capsule())
+//                        .clipShape(Capsule())
                         .background(K.textBackgroundColor)
                     }
+                        
                     .sheet(isPresented: $filtersPressed){
                      FiltersView(self.apiManager.categories)
                     }
@@ -58,9 +62,11 @@ struct ContentView: View {
                         Text("clear filters")
                             .font(.custom(K.titleFontName, size: K.filterFontSize))
                             .foregroundColor(K.textColor)
+                        .padding(.init(top: 5, leading: 10, bottom: 5, trailing: 10))
+                        .cornerRadius(7)
                     }
 //                    .padding(.init(top: 0, leading: 2, bottom: 0, trailing: 2))
-                    .clipShape(Capsule())
+//                    .clipShape(Capsule())
                     .background(K.textBackgroundColor)
 //                    .padding(.init(top: 0, leading: 2, bottom: 0, trailing: 2))
                     Spacer()

@@ -7,5 +7,5 @@ target 'EdvoraAssessment' do
 
   # Pods for EdvoraAssessment
 
-pod 'NavigationBarColor'
+pod 'iOSDropDown'
 end

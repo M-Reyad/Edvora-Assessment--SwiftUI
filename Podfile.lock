@@ -1,16 +1,16 @@
 PODS:
-  - NavigationBarColor (0.1.0)
+  - iOSDropDown (0.3.4)
 
 DEPENDENCIES:
-  - NavigationBarColor
+  - iOSDropDown
 
 SPEC REPOS:
   trunk:
-    - NavigationBarColor
+    - iOSDropDown
 
 SPEC CHECKSUMS:
-  NavigationBarColor: fbb2d80e4772c59bb55575572cf0499459db366e
+  iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
 
-PODFILE CHECKSUM: c4bc1e583845460bd07cdf8529b2e777838cf192
+PODFILE CHECKSUM: 9901b3b38e933d370c834ccb22589083a297ec54
 
 COCOAPODS: 1.11.2

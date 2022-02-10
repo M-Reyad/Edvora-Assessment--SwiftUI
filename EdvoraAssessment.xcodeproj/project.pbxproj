@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C71188A741E4519E9B383B5 /* Pods_EdvoraAssessment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3132D1D6AC5BC1B6CEEA1DDB /* Pods_EdvoraAssessment.framework */; };
 		D7A1F58127B453EB0036F12D /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D7A1F58027B453EB0036F12D /* SDWebImageSwiftUI */; };
 		D7BD540C27B541FD003B34D9 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BD540B27B541FD003B34D9 /* NavigationBarView.swift */; };
 		D7CD751C27B160BC004189D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CD751B27B160BC004189D6 /* AppDelegate.swift */; };
@@ -23,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2ACADCD3934390A3B6B0F162 /* Pods-EdvoraAssessment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EdvoraAssessment.debug.xcconfig"; path = "Target Support Files/Pods-EdvoraAssessment/Pods-EdvoraAssessment.debug.xcconfig"; sourceTree = "<group>"; };
+		3132D1D6AC5BC1B6CEEA1DDB /* Pods_EdvoraAssessment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EdvoraAssessment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6ACA3CF9580317E51CA759B2 /* Pods-EdvoraAssessment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EdvoraAssessment.release.xcconfig"; path = "Target Support Files/Pods-EdvoraAssessment/Pods-EdvoraAssessment.release.xcconfig"; sourceTree = "<group>"; };
 		D7BD540B27B541FD003B34D9 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		D7CD751827B160BC004189D6 /* EdvoraAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EdvoraAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7CD751B27B160BC004189D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,17 +49,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7A1F58127B453EB0036F12D /* SDWebImageSwiftUI in Frameworks */,
+				4C71188A741E4519E9B383B5 /* Pods_EdvoraAssessment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		277E227708C0A1090269B388 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3132D1D6AC5BC1B6CEEA1DDB /* Pods_EdvoraAssessment.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5994999C606A56BDF69FE211 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2ACADCD3934390A3B6B0F162 /* Pods-EdvoraAssessment.debug.xcconfig */,
+				6ACA3CF9580317E51CA759B2 /* Pods-EdvoraAssessment.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D7CD750F27B160BC004189D6 = {
 			isa = PBXGroup;
 			children = (
 				D7CD751A27B160BC004189D6 /* EdvoraAssessment */,
 				D7CD751927B160BC004189D6 /* Products */,
+				5994999C606A56BDF69FE211 /* Pods */,
+				277E227708C0A1090269B388 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,9 +143,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7CD752C27B160BD004189D6 /* Build configuration list for PBXNativeTarget "EdvoraAssessment" */;
 			buildPhases = (
+				F28BBF77B87749EC040E283F /* [CP] Check Pods Manifest.lock */,
 				D7CD751427B160BC004189D6 /* Sources */,
 				D7CD751527B160BC004189D6 /* Frameworks */,
 				D7CD751627B160BC004189D6 /* Resources */,
+				BBE13DC1AE4FC29E3172EC20 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,7 +186,7 @@
 			);
 			mainGroup = D7CD750F27B160BC004189D6;
 			packageReferences = (
-				D7A1F57F27B453EB0036F12D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				D7A1F57F27B453EB0036F12D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI.git" */,
 			);
 			productRefGroup = D7CD751927B160BC004189D6 /* Products */;
 			projectDirPath = "";
@@ -182,6 +209,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BBE13DC1AE4FC29E3172EC20 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EdvoraAssessment/Pods-EdvoraAssessment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EdvoraAssessment/Pods-EdvoraAssessment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EdvoraAssessment/Pods-EdvoraAssessment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F28BBF77B87749EC040E283F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EdvoraAssessment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D7CD751427B160BC004189D6 /* Sources */ = {
@@ -330,6 +399,7 @@
 		};
 		D7CD752D27B160BD004189D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2ACADCD3934390A3B6B0F162 /* Pods-EdvoraAssessment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -351,6 +421,7 @@
 		};
 		D7CD752E27B160BD004189D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ACA3CF9580317E51CA759B2 /* Pods-EdvoraAssessment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -394,7 +465,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D7A1F57F27B453EB0036F12D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+		D7A1F57F27B453EB0036F12D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
 			requirement = {
@@ -407,7 +478,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		D7A1F58027B453EB0036F12D /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D7A1F57F27B453EB0036F12D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			package = D7A1F57F27B453EB0036F12D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI.git" */;
 			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */

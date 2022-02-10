@@ -7,10 +7,11 @@
 //
 
 import SwiftUI
-//
+import iOSDropDown
 
 
 struct FiltersView: View {
+    
     
     init(_ categories: [Category]){
         self.categories = categories
@@ -18,28 +19,32 @@ struct FiltersView: View {
     
     var categories: [Category]
     var body: some View {
-        VStack(alignment: .leading){
-            Text("Filters")
-                .font(.custom(K.titleFontName, size: K.filterFontSize))
-                .foregroundColor(K.textColor)
-            Divider()
+        ZStack{
+            Color(K.backGroundColor)
+//                .edgesIgnoringSafeArea(.all)
             VStack(alignment: .leading){
-                Button(action: {}) {
-                    Spacer()
-                    HStack(alignment: .center){
-                        Text("Products")
-                            .font(.custom(K.titleFontName, size: K.filterFontSize))
-                            .foregroundColor(K.textColor)
+                //            DropDown(
+                Text("Filters")
+                    .font(.custom(K.titleFontName, size: K.filterFontSize))
+                    .foregroundColor(K.textColor)
+                Divider()
+                VStack(alignment: .leading){
+                    Button(action: {}) {
                         Spacer()
-                        Spacer()
-                        Image(systemName: K.dropDownIcon)
-                            .foregroundColor(K.textColor)
-                        Spacer()
+                        HStack(alignment: .center){
+                            Text("Products")
+                                .font(.custom(K.titleFontName, size: K.filterFontSize))
+                                .foregroundColor(K.textColor)
+                            Spacer()
+                            Spacer()
+                            Image(systemName: K.dropDownIcon)
+                                .foregroundColor(K.textColor)
+                            Spacer()
+                        }
                     }
-                }
-                Button(action: {}) {
-                    Spacer()
-                    HStack(alignment: .center){
+                    Button(action: {}) {
+                        Spacer()
+                        HStack(alignment: .center){
                             Text("State")
                                 .font(.custom(K.titleFontName, size: K.filterFontSize))
                                 .foregroundColor(K.textColor)
@@ -50,8 +55,8 @@ struct FiltersView: View {
                             Spacer()
                         }
                     }
-                Button(action: {}) {
-                    Spacer()
+                    Button(action: {}) {
+                        Spacer()
                         HStack(alignment: .center){
                             Text("City")
                                 .font(.custom(K.titleFontName, size: K.filterFontSize))
@@ -63,15 +68,16 @@ struct FiltersView: View {
                             Spacer()
                         }
                     }
+                }
             }
+            .frame(width: UIScreen.main.bounds.size.width/2,
+                   height: UIScreen.main.bounds.size.height/1.5,
+                   alignment: .center)
+            
+            
         }
-        .frame(width: UIScreen.main.bounds.size.width/3,
-               height: UIScreen.main.bounds.size.height/2,
-               alignment: .center)
-            .foregroundColor(K.productBackGroundColor)
-
     }
-    }
+}
 
 
 //struct FiltersView_Previews: PreviewProvider {
