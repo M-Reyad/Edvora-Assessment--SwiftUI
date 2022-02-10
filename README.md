@@ -24,8 +24,8 @@ Responsible for Making Safe URL Session, Fetching the JSON data and finally crea
 
 **In Progress to be completed:
 
->> 1- Attaching a scroll pattern (dots) to the Scroll view of products.
->> 2- Completing the Filters Functionlaity
+ 1- Attaching a scroll pattern (dots) to the Scroll view of products.
+ 2- Completing the Filters Functionlaity
 
 
 
