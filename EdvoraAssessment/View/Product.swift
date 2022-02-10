@@ -8,6 +8,11 @@
 import SwiftUI
 import SDWebImageSwiftUI
 
+struct Address : Decodable, Hashable{
+    var state : String
+    var city : String
+    
+}
 
 struct Products: View, Hashable, Decodable{
     
@@ -16,7 +21,7 @@ struct Products: View, Hashable, Decodable{
     var price : Int
     var discription: String
     var date : String
-    var address : [String: String]
+    var address : Address
     var image: String
     
     init(_ product: Products){
@@ -31,7 +36,7 @@ struct Products: View, Hashable, Decodable{
     }
     
     var body: some View {
-        VStack/*(alignment: .leading)*/{
+        VStack(alignment: .leading){
             HStack(alignment: .center){
                 Spacer()
                 WebImage(url: URL(string: self.image))
@@ -41,7 +46,7 @@ struct Products: View, Hashable, Decodable{
                            height: UIScreen.main.bounds.size.height/4.75,
                            alignment: .leading)
                     .scaledToFit()
-//                    .cornerRadius(UIScreen.main.bounds.size.width/50)
+                    .cornerRadius(UIScreen.main.bounds.size.width/50)
                 Spacer()
                 VStack(alignment: .leading){
                     Spacer()
@@ -66,8 +71,8 @@ struct Products: View, Hashable, Decodable{
             }
             .padding(2)
             HStack(alignment: .center){
-                Text("city")
-//                Text(self.address["city"])
+//                Text("city")
+                Text(self.address.city)
                     .font(.custom(K.bodyFontName, size: K.bodyFontSize))
                 Spacer()
                 Text(self.date)
@@ -86,9 +91,6 @@ struct Products: View, Hashable, Decodable{
             .padding(EdgeInsets(top: 1, leading: 2 , bottom: 1, trailing: 2))
             
             
-            .onAppear(){
-//                print(UIScreen.main.bounds.size.width)
-        }
     }
     
 }

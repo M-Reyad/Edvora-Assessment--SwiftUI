@@ -23,9 +23,6 @@ struct ContentView: View {
             
             VStack(alignment: .leading){
                 
-//                FiltersView()
-                
-//
                 HStack(alignment: .top){
                     Spacer()
                     Button(action: {
@@ -38,8 +35,8 @@ struct ContentView: View {
                         FiltersView()
                             .position(x:100, y:100)
                             .frame(width: UIScreen.main.bounds.size.width/4,
-                            height: UIScreen.main.bounds.size.height/3,
-                            alignment: .center)
+                                   height: UIScreen.main.bounds.size.height/3,
+                                   alignment: .center)
                     }, label: {
                         HStack{
                             Spacer()

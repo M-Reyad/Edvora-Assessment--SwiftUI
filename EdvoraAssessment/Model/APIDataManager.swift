@@ -25,21 +25,11 @@ class APIDataManager: ObservableObject {
                     print("Error in session data Task: \(error!)")
                     return
                 }
-                print("Here2")
                 if let safeData = data{
-                    print("Hereeee3")
-                    
                     do {
                         let decodedData = try JSONDecoder().decode([Products].self, from: safeData)
                         DispatchQueue.main.async {
-                            print("Number of decoded Data: \(decodedData.count)")
                             self.createCategoriesList(decodedData)
-                            //                            self.createCategoriesList(self.fetchedData)
-                            //                            print(decodedData.count)
-                            //                            print(self.products)
-                            
-                            //                            print(self.categories.count)
-                            
                             
                         }
                     }catch{
@@ -49,7 +39,6 @@ class APIDataManager: ObservableObject {
             }
             //MARK:-4- Resume Task
             task.resume()
-            //            createCategoriesList(products)
         }
         
     }
@@ -64,9 +53,6 @@ class APIDataManager: ObservableObject {
                     categoryStringList.append(result.product_name)
                 }
             }
-        print(categoryStringList)
-        print("Count of Products list in the fetching func \(productsList.count)")
-        print("Count of Categories\(self.categories.count)& Products \(self.products.count)")
         for categoryString in categoryStringList{
             for result in decodedData{
                 if result.product_name == categoryString{
@@ -76,12 +62,9 @@ class APIDataManager: ObservableObject {
             }
             let newCategory = Category(categoryString, productsList: productsList)
             categories.append(newCategory)
-            print(productsList.count)
-            print(self.categories.count)
+
             productsList = []
         }
-        print("Count of Categories\(self.categories.count)& Products \(self.products.count)")
-        print("Number of products \(self.products.count) and Number of decoded Data \(decodedData.count)")
 }
     
     
@@ -94,11 +77,5 @@ class APIDataManager: ObservableObject {
 }
     }
 }
-//    let products : [Product] =
-//        [ProductView(id: "1", productName: "Bags", brandName: "CAT", price: 120, desc: "This is the most lovely Bag you could ever have!"),
-//         ProductView(id: "2", productName: "Bags", brandName: "D&G", price: 130, desc: "This is the most lovely Bag you could ever have!"),
-//         ProductView(id: "3", productName: "Shoes", brandName: "D&G", price: 140, desc: "This is the most lovely Shoes you could ever have!"),
-//         ProductView(id: "4", productName: "Dress", brandName: "CAT", price: 200, desc: "This is the most lovely Dress you could ever have!"),
-//         ProductView(id: "5", productName: "Dress", brandName: "D&G", price: 190, desc: "This is the most lovely Dress you could ever have!")]
-//
+
 

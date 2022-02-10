@@ -34,8 +34,6 @@ struct Category: View, Hashable {
 
                 ScrollView(.horizontal) {
                         HStack(spacing: 5){
-//                            Text("Hello")
-//                            Text("Hi")
                             ForEach(self.products, id: \.self){ product in
 
                                 Products(product)
@@ -49,10 +47,7 @@ struct Category: View, Hashable {
             Divider()
             Spacer()
         }
-        .onAppear {
-//            print(self.productName)
-//            print(self.products)
-        }
+
         
     }
 }
