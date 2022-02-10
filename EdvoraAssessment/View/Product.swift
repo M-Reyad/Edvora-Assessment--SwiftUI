@@ -87,7 +87,7 @@ struct Products: View, Hashable, Decodable{
                height: UIScreen.main.bounds.size.height/3,
                alignment: .center)
             .cornerRadius(UIScreen.main.bounds.size.width/40)
-            .background(K.textBackgroundColor)
+            .background(K.productBackGroundColor)
             .padding(EdgeInsets(top: 1, leading: 2 , bottom: 1, trailing: 2))
             
             

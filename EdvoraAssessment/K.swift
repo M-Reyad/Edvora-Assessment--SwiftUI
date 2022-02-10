@@ -17,12 +17,14 @@ class K {
     static let dropDownIcon = "arrowtriangle.down.fill"
     static let textBackgroundColor = Color("textBackgroundColor")
     static let image = UIImage(named: "Image")
-    static let titleFontName = "Georgia"
+    static let titleFontName = "Times New Roman"
     static let titleFontSize = CGFloat(UIScreen.main.bounds.size.width/18.5)   //20
     static let filterFontName = "Marker Felt"
     static let filterFontSize = CGFloat(UIScreen.main.bounds.size.width/23)  //17
     static let subtitleFontsize = CGFloat(UIScreen.main.bounds.size.width/23) //17
     static let bodyFontName = "Arial"
     static let bodyFontSize = CGFloat(UIScreen.main.bounds.size.width/28) //17
+    static let headlineFontName = "Georgia"
+    static let headlineFontSize = CGFloat(UIScreen.main.bounds.size.width/12)
     
 }

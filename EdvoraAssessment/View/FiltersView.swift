@@ -11,7 +11,7 @@ import SwiftUI
 
 
 struct FiltersView: View {
-    @State static var filtersPressed = false
+    
 //    let options = ["Egypt", "America", "KSA"]
     //    let categoryDropDown = DropDown()
     var body: some View {

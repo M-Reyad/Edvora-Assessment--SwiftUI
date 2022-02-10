@@ -7,37 +7,34 @@
 //
 
 import SwiftUI
-//import NavigationBarColor
+
 
 struct ContentView: View {
-
+    @State private var filtersPressed = false
     @ObservedObject var apiManager = APIDataManager()
     
     var body: some View {
         
         
-        NavigationView{
-//            ZStack{
-//                Color(K.backGroundColor)
-                
+        //        NavigationView{
+        ZStack{
+            Color(K.backGroundColor)
+                .edgesIgnoringSafeArea(.all)
+            
             
             VStack(alignment: .leading){
-                
+                NavigationBarView()
+                    .frame(width: UIScreen.main.bounds.size.width,
+                           height: UIScreen.main.bounds.size.height/8,
+                           alignment: .leading)
                 HStack(alignment: .top){
                     Spacer()
                     Button(action: {
-                        print("Pressed!!")
-                        if FiltersView.filtersPressed != false {
-                            FiltersView.filtersPressed = false
-                        }else{
-                            FiltersView.filtersPressed = true }
                         
-                        FiltersView()
-                            .position(x:100, y:100)
-                            .frame(width: UIScreen.main.bounds.size.width/4,
-                                   height: UIScreen.main.bounds.size.height/3,
-                                   alignment: .center)
-                    }, label: {
+                        print("Pressed!!")
+                        self.filtersPressed.toggle()
+                    })
+                    {
                         HStack{
                             Spacer()
                             Text("Filters")
@@ -49,10 +46,36 @@ struct ContentView: View {
                                 .foregroundColor(K.textColor)
                             Spacer()
                         }
-                    })
-                        .padding(7)
-                        .clipShape(RoundedRectangle(cornerRadius: 5))
+                        .padding(6)
+                        .clipShape(Capsule())
                         .background(K.textBackgroundColor)
+                        /*Button(action: {{
+                         print  ("Pressed!!")
+                         self.filtersPressed.toggle()
+                         }.sheet(is Presented: $filtersPressed){
+                         FiltersView()
+                         .position(x:100, y:100)
+                         .frame(width: UIScreen.main.bounds.size.width/4,
+                         height: UIScreen.main.bounds.size.height/3,
+                         alignment: .center)
+                         }, label: {
+                         HStack{
+                         Spacer()
+                         Text("Filters")
+                         .font(.custom(K.titleFontName, size: K.filterFontSize))
+                         .foregroundColor(K.textColor)
+                         Spacer()
+                         Spacer()
+                         Image(systemName: K.dropDownIcon)
+                         .foregroundColor(K.textColor)
+                         Spacer()
+                         }
+                         })
+                         .padding(7)
+                         .clipShape(RoundedRectangle(cornerRadius: 5))
+                         .background(K.textBackgroundColor)
+                         */
+                    }
                     Spacer()
                     Spacer()
                     Spacer()
@@ -70,35 +93,35 @@ struct ContentView: View {
                     .background(K.textBackgroundColor)
                     
                 }
-//                
-                if self.apiManager.categories.count != 0 {
-                    ScrollView(.vertical){
-                        
-
-                        ForEach(self.apiManager.categories, id: \.self) { category in
-                            Category(category.productName, productsList: category.products)
-                        }
+            
+            if self.apiManager.categories.count != 0 {
+                ScrollView(.vertical){
+                    
+                    
+                    ForEach(self.apiManager.categories, id: \.self) { category in
+                        Category(category.productName, productsList: category.products)
                     }
-                    .padding(2)
                 }
-                Spacer()
-                
+                .padding(2)
             }
-            .padding(3)
-            .navigationBarTitle("Edvora", displayMode: .automatic)
+            Spacer()
             
-        
+        }
+        .padding([.leading, .trailing], 5)
+            //            .navigationBarTitle("Edvora", displayMode: .automatic)
             
-        .onAppear {
-            print("Appeared!!")
-            DispatchQueue.main.async {
-                self.apiManager.fetchData()
-            }
+            
+            
+            .onAppear {
+                print("Appeared!!")
+                DispatchQueue.main.async {
+                    self.apiManager.fetchData()
+                }
         }
-        }
-     .padding(2)
     }
-    
+    //     .padding(2)
+}
+
 }
 
 
@@ -108,21 +131,4 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-//let list = [Product(product_name: "Berkshire Hathway",
-//                    brand_name: "Berkshire",
-//                    price: 900,
-//                    discription: "Its a good product",
-//                    date: "2016-10-12T23:05:52.617Z",
-//                    address: ["city": "Palakkad", "state": "Kerala"]),
-//            Product(product_name: "Berkshire Hathway",
-//                    brand_name: "Berkshire",
-//                    price: 900,
-//                    discription: "Its a good product",
-//                    date: "2017-12-17T22:45:41.740Z",
-//                    address: ["state": "Kerala", "city": "Perinthalmanna"]),
-//            Product(product_name: "Berkshire Hathway",
-//                    brand_name: "Berkshire",
-//                    price: 900,
-//                    discription: "Its a good product",
-//                    date: "2019-05-03T16:35:57.427Z",
-//                    address: ["state": "Meghalaya", "city": "Tura"])]
+
