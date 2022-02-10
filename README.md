@@ -31,7 +31,7 @@ Responsible for Making Safe URL Session, Fetching the JSON data and finally crea
 
 ##Images:
 
-![Simulator Screen Shot - iPhone 8 - 2022-02-10 at 13 54 36](https://user-images.githubusercontent.com/93882864/153404577-9510a1d6-c276-48b7-aa20-ee6cd3c7f170.png = 200x250)
+![Simulator Screen Shot - iPhone 8 - 2022-02-10 at 13 54 36](https://user-images.githubusercontent.com/93882864/153404577-9510a1d6-c276-48b7-aa20-ee6cd3c7f170.png)
 
 ![Simulator Screen Shot - iPhone 8 - 2022-02-10 at 15 26 09](https://user-images.githubusercontent.com/93882864/153417626-28d5b2f1-aa2d-409e-86eb-7f779004b980.png)
 
