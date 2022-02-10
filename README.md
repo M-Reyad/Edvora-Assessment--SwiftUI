@@ -31,11 +31,16 @@ Responsible for Making Safe URL Session, Fetching the JSON data and finally crea
 
 ##Images:
 
-![Simulator Screen Shot - iPhone 8 - 2022-02-10 at 13 54 36](https://user-images.githubusercontent.com/93882864/153404577-9510a1d6-c276-48b7-aa20-ee6cd3c7f170.png)
+<img src="https://user-images.githubusercontent.com/93882864/153404577-9510a1d6-c276-48b7-aa20-ee6cd3c7f170.png" width=50% height=50%>
 
-![Simulator Screen Shot - iPhone 8 - 2022-02-10 at 15 26 09](https://user-images.githubusercontent.com/93882864/153417626-28d5b2f1-aa2d-409e-86eb-7f779004b980.png)
+<img src="https://user-images.githubusercontent.com/93882864/153438513-019d1797-38ff-4921-a48b-a5ed34462c3b.png" width=50% height=50%>
 
-![Simulator Screen Shot - iPhone 8 - 2022-02-10 at 15 26 32](https://user-images.githubusercontent.com/93882864/153417609-27fe84f4-be5a-4c92-ab07-ef74157c94bf.png)
+<img src="https://user-images.githubusercontent.com/93882864/153438531-4db8d600-e4d5-4706-9a5b-602549cc0bbd.png" width=50% height=50%>
 
-https://user-images.githubusercontent.com/93882864/153310562-86e51a9b-098f-440d-97f2-00e505c68487.mov
+<img src="https://user-images.githubusercontent.com/93882864/153438537-0565ceba-f640-4397-86b6-feb9998e58d8.png" width=50% height=50%>
+
+
+
+https://user-images.githubusercontent.com/93882864/153440063-cbe75e8f-2a53-477c-be43-2cbbaeada0e1.mov
+
 
