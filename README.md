@@ -27,8 +27,6 @@ Responsible for Making Safe URL Session, Fetching the JSON data and finally crea
  1- Attaching a scroll pattern (dots) to the Scroll view of products.
  2- Completing the Filters Functionlaity
 
-
-
 ##Images:
 <img src="https://user-images.githubusercontent.com/93882864/153404577-9510a1d6-c276-48b7-aa20-ee6cd3c7f170.png" width=30% height=30%>
 
