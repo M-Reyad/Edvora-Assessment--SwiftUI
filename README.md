@@ -29,7 +29,8 @@ Responsible for Making Safe URL Session, Fetching the JSON data and finally crea
 
 ## Images:
 
-![153404577-9510a1d6-c276-48b7-aa20-ee6cd3c7f170](https://user-images.githubusercontent.com/93882864/178956504-e11b466a-c69a-43a4-95ff-a04e9c6056f1.png =414*800)
+<img src="https://user-images.githubusercontent.com/93882864/178956504-e11b466a-c69a-43a4-95ff-a04e9c6056f1.png" width="414" height="800">
+![153404577-9510a1d6-c276-48b7-aa20-ee6cd3c7f170](https://user-images.githubusercontent.com/93882864/178956504-e11b466a-c69a-43a4-95ff-a04e9c6056f1.png)
 
 ![153438513-019d1797-38ff-4921-a48b-a5ed34462c3b](https://user-images.githubusercontent.com/93882864/178956522-cbb5101d-a9d7-4ec1-b440-10f08d2c6b57.png)
 
